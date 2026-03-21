@@ -51,10 +51,9 @@ def circumference():
         except ValueError:
             return render_template('circle_calculations.html', printed_result="Cannot perform operation with this input")
     
-        try:
-            my_circle = Circle(radius)
-            result = my_circle.circumference()
-            return render_template('circle_calculations.html', printed_result = str(result))
+        my_circle = Circle(radius)
+        result = my_circle.circumference()
+        return render_template('circle_calculations.html', printed_result = str(result))
     
     return render_template('circle_calculations.html')
     
